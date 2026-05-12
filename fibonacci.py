@@ -6,6 +6,8 @@ else:
     a, b = 0, 1
     total = 0
     series = []
+    even_count = 0
+    odd_count = 0
 
     print("\nFibonacci Series:")
 
@@ -13,8 +15,13 @@ else:
         print(f"  Term {i+1}: {a}")
         total += a
         series.append(a)
+        if a % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
         a, b = b, a + b
 
     print(f"\nSeries     : {series}")
     print(f"Sum        : {total}")
     print(f"Largest    : {max(series)}")
+    print(f"Even terms : {even_count}  |  Odd terms : {odd_count}")
