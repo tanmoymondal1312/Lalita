@@ -8,15 +8,17 @@ elif num == 2:
     print(f"{num} Is a Prime Number (smallest prime)")
 else:
     is_prime = True
-    factor = None
+    factors = []
     for i in range(2, int(num ** 0.5) + 1):
         if num % i == 0:
             is_prime = False
-            factor = i
-            break
+            factors.append(i)
+            factors.append(num // i)
+
     if is_prime:
         print(f"{num} Is a Prime Number")
-        print(f"Divisible only by 1 and {num}")
+        print(f"Divisible only by: 1 and {num}")
     else:
+        factors = sorted(set(factors))
         print(f"{num} Is Not a Prime Number")
-        print(f"Divisible by {factor} and {num // factor}")
+        print(f"Factors: 1, {', '.join(map(str, factors))}, {num}")
