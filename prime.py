@@ -4,6 +4,8 @@ print(f"\n--- Prime Check for {num} ---")
 
 if num <= 1:
     print(f"{num} Is Not a Prime Number")
+elif num == 2:
+    print(f"{num} Is a Prime Number (smallest prime)")
 else:
     is_prime = True
     factor = None
@@ -14,5 +16,7 @@ else:
             break
     if is_prime:
         print(f"{num} Is a Prime Number")
+        print(f"Divisible only by 1 and {num}")
     else:
-        print(f"{num} Is Not a Prime Number (divisible by {factor})")
+        print(f"{num} Is Not a Prime Number")
+        print(f"Divisible by {factor} and {num // factor}")
