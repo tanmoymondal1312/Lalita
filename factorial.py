@@ -2,6 +2,8 @@ num = int(input("Enter a number to find Factorial: "))
 
 factorial = 1
 
+print(f"\n--- Factorial of {num} ---")
+
 if num < 0:
     print("Factorial is not defined for negative numbers")
 elif num == 0:
