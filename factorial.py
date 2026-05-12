@@ -1,6 +1,8 @@
 num = int(input("Enter a number to find Factorial: "))
 
-print(f"\n--- Factorial of {num} ---")
+print("\n" + "=" * 35)
+print("       FACTORIAL CALCULATOR")
+print("=" * 35)
 
 if num < 0:
     print("Factorial is not defined for negative numbers")
@@ -11,12 +13,15 @@ else:
     steps = []
     for i in range(1, num + 1):
         factorial = factorial * i
-        steps.append(f"{i}! = {factorial}")
+        steps.append(f"  {i}! = {factorial}")
 
     formula = " x ".join(str(i) for i in range(1, num + 1))
-    print(f"Formula   : {formula}")
+    print(f"Formula : {formula} = {factorial}")
     print(f"\nStep by Step:")
     for step in steps:
-        print(f"  {step}")
-    print(f"\nFinal Answer : {num}! = {factorial}")
+        print(step)
+
+    print("=" * 35)
+    print(f"Final Answer : {num}! = {factorial}")
     print(f"Digits       : {len(str(factorial))} digit number")
+    print("=" * 35)
