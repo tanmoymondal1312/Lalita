@@ -9,10 +9,13 @@ else:
     even_count = 0
     odd_count = 0
 
-    print("\nFibonacci Series:")
+    print("\n" + "=" * 35)
+    print("       FIBONACCI SERIES")
+    print("=" * 35)
 
     for i in range(n):
-        print(f"  Term {i+1}: {a}")
+        label = "Even" if a % 2 == 0 else "Odd"
+        print(f"  Term {i+1:>2}: {a}  ({label})")
         total += a
         series.append(a)
         if a % 2 == 0:
@@ -21,7 +24,9 @@ else:
             odd_count += 1
         a, b = b, a + b
 
-    print(f"\nSeries     : {series}")
+    print("=" * 35)
+    print(f"Series     : {series}")
     print(f"Sum        : {total}")
     print(f"Largest    : {max(series)}")
     print(f"Even terms : {even_count}  |  Odd terms : {odd_count}")
+    print("=" * 35)
