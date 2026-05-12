@@ -1,14 +1,16 @@
-word = input("Enter a word to check Palindrome: ")
+word = input("Enter a word or sentence to check Palindrome: ")
 
 if not word.strip():
     print("Please enter a valid word!")
 else:
-    reversed_word = word[::-1]
+    clean = word.lower().replace(" ", "")
+    reversed_clean = clean[::-1]
 
     print(f"\nOriginal  : {word}")
-    print(f"Reversed  : {reversed_word}")
+    print(f"Reversed  : {word[::-1]}")
+    print(f"Length    : {len(word)} characters")
 
-    if word.lower() == reversed_word.lower():
+    if clean == reversed_clean:
         print(f"Result    : '{word}' Is a Palindrome ✓")
     else:
         print(f"Result    : '{word}' Is Not a Palindrome ✗")
