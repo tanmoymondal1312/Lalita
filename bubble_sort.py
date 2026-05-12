@@ -1,6 +1,7 @@
 numbers = [64, 34, 25, 12, 22, 11, 90]
 
 print("Before Sorting:", numbers)
+print(f"Total Elements: {len(numbers)}")
 
 n = len(numbers)
 swaps = 0
@@ -13,3 +14,4 @@ for i in range(n):
 
 print("After Bubble Sort:", numbers)
 print(f"Total Swaps: {swaps}")
+print(f"Smallest: {numbers[0]}  |  Largest: {numbers[-1]}")
